@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Practicum 1
 Route::get('/', function () {
-    return view('welcome');
+    echo 'Hi! Welcome To Laravel';
 });
+
+Route::view('/welcome', 'welcome');
+
+Route::get('/articles/{id}', function($id) {
+    echo "This is Article Pages with ID: ".$id;
+}); 
