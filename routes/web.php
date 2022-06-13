@@ -60,3 +60,5 @@ Route::prefix('program')->group(function () {
 });
 
 Route::redirect('/about-us', 'https://www.educastudio.com/about-us'); */
+
+Route::view('/layout', 'layouts.master');
