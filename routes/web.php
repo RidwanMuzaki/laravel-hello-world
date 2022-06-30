@@ -62,3 +62,6 @@ Route::prefix('program')->group(function () {
 Route::redirect('/about-us', 'https://www.educastudio.com/about-us'); */
 
 Route::view('/shop', 'shop');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
