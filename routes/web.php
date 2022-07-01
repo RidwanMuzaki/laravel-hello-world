@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +34,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [AboutController::class, 'about']);
 
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
-
+/* Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+ */
 //Practicum 3
 /* Route::redirect('/', 'https://www.educastudio.com');
 
@@ -65,3 +67,5 @@ Route::view('/shop', 'shop');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('articles', ArticleController::class);
